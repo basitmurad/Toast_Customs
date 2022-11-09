@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_medium"
+        android:text="Settings"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/margin_top_medium"
+        android:text="What settings do you want"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/margin_top_medium"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <Switch
+            android:id="@+id/switch_wifi"
+            android:padding="5dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/background_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wifi"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+        <Switch
+            android:id="@+id/switch_blue"
+            android:layout_margin="3dp"
+            android:padding="5dp"
+            android:background="@drawable/background_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bluetooth"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+        <Switch
+            android:id="@+id/switch_flight"
+            android:layout_margin="3dp"
+            android:padding="5dp"
+            android:background="@drawable/background_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Flight mode"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+        <Switch
+            android:id="@+id/switch_hot"
+            android:padding="5dp"
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hotspot"
+            android:background="@drawable/background_toggle"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+        <Switch
+            android:id="@+id/switch_noti"
+            android:layout_margin="3dp"
+            android:padding="5dp"
+            android:background="@drawable/background_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notifications"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+
+        android:gravity="center"
+        android:text="submit"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
